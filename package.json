@@ -9,8 +9,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@koa/router": "^9.0.1",
     "@mhycy/aliyun-dns": "^1.0.0",
+    "axios": "^0.19.2",
     "better-sqlite3": "^7.1.0",
-    "fs": "0.0.1-security"
+    "cli-table3": "^0.6.0",
+    "fs": "0.0.1-security",
+    "koa": "^2.13.0",
+    "koa-bodyparser": "^4.3.0"
   }
 }
