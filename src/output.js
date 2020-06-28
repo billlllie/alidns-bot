@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { resolve } = require('path');
+const { rejects } = require('assert');
 
 (async function (){
     // main();
@@ -36,11 +37,11 @@ function showDomain(response) {
 }
 
 function format(response) {
-    if (response==undefined) return;
+    if (response==undefined) return console.error('No response specified');
 
     let result = 'Record\tType\tLine(ISP)\tValue\tStatus\t\n';
     let count = response.TotalCount;
-    let pageLeft = Math.ceil(count/20)-response.PageNumber;
+    let pageLeft = count==0?0:Math.ceil(count/20)-response.PageNumber;
 
     return new Promise(resolve=> {
         response.DomainRecords.Record.forEach(elem=> {

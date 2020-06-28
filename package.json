@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@mhycy/aliyun-dns": "^1.0.0",
+    "better-sqlite3": "^7.1.0",
     "fs": "0.0.1-security"
   }
 }
